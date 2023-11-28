@@ -1,0 +1,16 @@
+{
+    "caption": "reset messages",
+    "doc": "Reset the message history",
+    "fields": {
+        "ACH": {
+            "caption": "Message JSON",
+            "doc": "provide a array to be set as messages in the format [{\"role\": \"user\", \"message\": \"generate a 3 word joke\"}]",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "messages",
+            "optional": true,
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

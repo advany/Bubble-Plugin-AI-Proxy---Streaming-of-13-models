@@ -1,0 +1,20 @@
+{
+    "dependencies": {
+        "plugin_api_version": 4,
+        "use_jquery": true
+    },
+    "shared_keys": {
+        "AAU": {
+            "caption": "CLIENT_ID",
+            "type": "client_safe"
+        },
+        "AAV": {
+            "caption": "CLIENT_SECRET",
+            "type": "secure"
+        },
+        "ACb": {
+            "caption": "AI_API_KEY",
+            "type": "secure"
+        }
+    }
+}

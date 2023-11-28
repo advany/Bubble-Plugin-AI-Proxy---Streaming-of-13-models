@@ -1,0 +1,23 @@
+{
+    "caption": "add message",
+    "doc": "Add a new message to be send",
+    "fields": {
+        "ABn": {
+            "caption": "role",
+            "default_val": "user",
+            "editor": "Dropdown",
+            "name": "role",
+            "options": "system,user,assistant,function_call,function",
+            "rank": 0
+        },
+        "ABo": {
+            "caption": "content",
+            "default_val": "Generate a joke with 3 words",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "content",
+            "rank": 1,
+            "value": "text"
+        }
+    }
+}

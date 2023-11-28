@@ -1,0 +1,16 @@
+{
+    "caption": "add function",
+    "doc": "Add function as JSON",
+    "fields": {
+        "ACP": {
+            "caption": "Function JSON",
+            "default_val": "",
+            "editor": "DynamicValue",
+            "is_list": false,
+            "name": "function",
+            "optional": false,
+            "rank": 0,
+            "value": "text"
+        }
+    }
+}

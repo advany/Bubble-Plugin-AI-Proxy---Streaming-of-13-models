@@ -1,0 +1,77 @@
+{
+    "category": "plugins",
+    "display": "Generate AI Token",
+    "fields": {
+        "AAF": {
+            "caption": "JSON Params",
+            "default_val": "{}",
+            "doc": "JSON formatted parameters that are passed to the AI",
+            "editor": "DynamicValue",
+            "long_text": true,
+            "name": "params",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAI": {
+            "caption": "Expiration time of AI Token in seconds",
+            "default_val": 60,
+            "doc": "Time in seconds for AI Token to expire if unused",
+            "editor": "StaticNumber",
+            "name": "expiration_time",
+            "rank": 1
+        },
+        "AAf": {
+            "caption": "AI Api Key",
+            "doc": "Dynamic Api Key to pass to the AI (will be encrypted)",
+            "editor": "DynamicValue",
+            "name": "api_key",
+            "optional": true,
+            "rank": 2,
+            "value": "text"
+        },
+        "AAg": {
+            "caption": "Adv: AI endpoint",
+            "default_val": "",
+            "doc": "Specify the alternative api endpoint you would like to call. Default for OpenAI is https://api.openai.com/v1/chat/completions",
+            "editor": "DynamicValue",
+            "name": "ai_url",
+            "optional": true,
+            "rank": 3,
+            "value": "text"
+        },
+        "AAl": {
+            "caption": "Encrypt",
+            "default_val": false,
+            "doc": "By default only the api_key is encrypted. If you like to encrypt everything (including json params and ai url), enable encrypt. Can be a little bit slower to execute.",
+            "editor": "DynamicValue",
+            "name": "encrypt",
+            "rank": 4,
+            "value": "boolean"
+        },
+        "ACg": {
+            "caption": "headers",
+            "default_val": "{}",
+            "doc": "Add custom headers to pass to the AI api",
+            "editor": "DynamicValue",
+            "name": "headers",
+            "rank": 5,
+            "value": "text"
+        }
+    },
+    "return_value": {
+        "AAD": {
+            "caption": "AI Token",
+            "name": "ai_token",
+            "rank": 0,
+            "value": "text"
+        },
+        "AAH": {
+            "caption": "error",
+            "name": "error",
+            "rank": 1,
+            "value": "text"
+        }
+    },
+    "type": "server_side",
+    "use_packages": true
+}

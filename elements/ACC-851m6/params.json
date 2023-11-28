@@ -1,0 +1,288 @@
+{
+    "add_is_visible": true,
+    "autobinding_value": "text",
+    "can_fit_height": true,
+    "can_fit_width": true,
+    "category": "visual elements",
+    "default_dim": {
+        "height": 10,
+        "width": 10
+    },
+    "display": "AI Proxy Stream",
+    "events": {
+        "ABp": {
+            "caption": "generation is finished",
+            "doc": "Triggers when AI is finished generating the output of content or function",
+            "name": "finished"
+        },
+        "ABq": {
+            "caption": "error happens",
+            "doc": "Triggers when AI is generates a error",
+            "name": "error"
+        },
+        "ABr": {
+            "caption": "added message",
+            "doc": "Triggers when the message is added (using add message)",
+            "name": "message_added"
+        },
+        "ACI": {
+            "caption": "messages reset",
+            "doc": "Triggers when the messages history has been reset",
+            "name": "messages_reset"
+        },
+        "ACQ": {
+            "caption": "functions_added",
+            "doc": "Triggers when the functions are added (using add function)",
+            "name": "function_added"
+        },
+        "ACS": {
+            "caption": "functions_reset",
+            "doc": "Triggers when the functions are cleared",
+            "name": "functions_reset"
+        },
+        "ACW": {
+            "caption": "added function result",
+            "doc": "Triggers when the function results are added",
+            "name": "function_result_added"
+        }
+    },
+    "fields": {
+        "ABs": {
+            "caption": "Adv: AI Proxy hostname",
+            "doc": "Specify your own AI Proxy hostname, to proxy all your own traffic using your own servers",
+            "editor": "DynamicValue",
+            "name": "custom_ai_proxy",
+            "optional": true,
+            "rank": 5,
+            "value": "text"
+        },
+        "ABt": {
+            "caption": "Openrouter Model",
+            "default_val": "openai/gpt-3.5-turbo",
+            "doc": "Select a model you want to use",
+            "editor": "Dropdown",
+            "name": "openrouter_model",
+            "options": "openai/gpt-3.5-turbo,openai/gpt-3.5-turbo-16k,openai/gpt-4,openai/gpt-4-32k,anthropic/claude-2,anthropic/claude-instant-v1,google/palm-2-chat-bison,google/palm-2-codechat-bison,meta-llama/llama-2-13b-chat,meta-llama/llama-2-70b-chat,nousresearch/nous-hermes-llama2-13b,mancer/weaver,gryphe/mythomax-L2-13b,jondurbin/airoboros-l2-70b-2.1,,undi95/remm-slerp-l2-13b,pygmalionai/mythalion-13b",
+            "rank": 2
+        },
+        "ABu": {
+            "caption": "system",
+            "default_val": "I am a helpful assistent",
+            "doc": "Add your default system message",
+            "editor": "DynamicValue",
+            "name": "system",
+            "rank": 1,
+            "value": "text"
+        },
+        "ACD": {
+            "caption": "OpenAI Model",
+            "default_val": "gpt-3.5-turbo",
+            "doc": "Select a model you want to use",
+            "editor": "Dropdown",
+            "name": "openai_model",
+            "options": "gpt-4,gpt-4-32k,gpt-3.5-turbo,gpt-3.5-turbo-16k",
+            "rank": 3
+        },
+        "ACF": {
+            "caption": "AI Service",
+            "default_val": "openai",
+            "doc": "You are a helpful assistant",
+            "editor": "Dropdown",
+            "name": "ai_service",
+            "options": "openai,openrouter",
+            "rank": 0
+        },
+        "ACJ": {
+            "caption": "Inc system message",
+            "default_val": true,
+            "doc": "Include the system message in the messages list",
+            "editor": "DynamicValue",
+            "name": "include_system_message",
+            "rank": 7,
+            "value": "boolean"
+        },
+        "ACK": {
+            "caption": "inc assistent messages",
+            "default_val": true,
+            "doc": "Include the assistent (ai) messages in the messages list",
+            "editor": "DynamicValue",
+            "name": "include_assistent_messages",
+            "rank": 8,
+            "value": "boolean"
+        },
+        "ACL": {
+            "caption": "inc function result messages",
+            "default_val": true,
+            "doc": "Include the function result messages in the messages list",
+            "editor": "DynamicValue",
+            "name": "include_function_result_messages",
+            "rank": 11,
+            "value": "boolean"
+        },
+        "ACM": {
+            "caption": "inc user messages",
+            "default_val": true,
+            "doc": "Include the user messages in the messages list",
+            "editor": "DynamicValue",
+            "name": "include_user_messages",
+            "rank": 9,
+            "value": "boolean"
+        },
+        "ACN": {
+            "caption": "Message prefix",
+            "default_val": true,
+            "doc": "Prefix messages with assistent / user / system / function",
+            "editor": "DynamicValue",
+            "name": "prefix_messages",
+            "rank": 6,
+            "value": "boolean"
+        },
+        "ACT": {
+            "caption": "inc function_call messages",
+            "default_val": true,
+            "doc": "Include the function call messages in the messages list",
+            "editor": "DynamicValue",
+            "name": "include_function_call_messages",
+            "rank": 10,
+            "value": "boolean"
+        },
+        "ACf": {
+            "caption": "Custom model name",
+            "default_val": "",
+            "doc": "Model name you want to use",
+            "editor": "DynamicValue",
+            "name": "custom_model_name",
+            "rank": 4,
+            "value": "text"
+        }
+    },
+    "has_reset_fn": false,
+    "icon": "ion-chatbubble",
+    "property_applications": {
+        "MinWidth": true,
+        "resizable": true
+    },
+    "states": {
+        "ABv": {
+            "caption": "Generated",
+            "doc": "Contains the streamed generated content",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "content",
+            "value": "text"
+        },
+        "ABw": {
+            "caption": "Error Message",
+            "doc": "Contains error message returned by the AI server",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error",
+            "value": "text"
+        },
+        "ABx": {
+            "caption": "Streaming Status",
+            "doc": "Contains the state of the stream",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "streaming",
+            "value": "boolean"
+        },
+        "ABy": {
+            "caption": "Error Status",
+            "doc": "Contains the status text returned by the AI server",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_status_text",
+            "value": "text"
+        },
+        "ABz": {
+            "caption": "Error Status Code",
+            "doc": "Contains the error http status code returned by the AI server",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "error_status_code",
+            "value": "number"
+        },
+        "ACA": {
+            "caption": "json_params",
+            "doc": "Contains the JSON params",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "json_params",
+            "value": "text"
+        },
+        "ACB": {
+            "caption": "messages",
+            "doc": "Contains the all the messages",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "messages",
+            "value": "text"
+        },
+        "ACY": {
+            "caption": "function_call_name",
+            "doc": "Contains the last function call's name",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "function_call_name",
+            "value": "text"
+        },
+        "ACZ": {
+            "caption": "Function Call Arg Names",
+            "doc": "Contains the last function call's argument names list",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "function_call_argument_names",
+            "value": "text"
+        },
+        "ACa": {
+            "caption": "Function Call Arg Values",
+            "doc": "Contains the last function call's argument values list",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "is_list": true,
+            "name": "function_call_argument_values",
+            "value": "text"
+        },
+        "ACc": {
+            "caption": "generated_content",
+            "doc": "Contains if content was generated",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "generated_content",
+            "value": "boolean"
+        },
+        "ACd": {
+            "caption": "generated_function",
+            "doc": "Contains if function was generated",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "generated_function",
+            "value": "boolean"
+        },
+        "ACe": {
+            "caption": "function",
+            "doc": "Contains the streamed generated function",
+            "initialization_code": {
+                "fn": "function(properties, context) {\n\n\n\n}"
+            },
+            "name": "function",
+            "value": "text"
+        }
+    },
+    "support_autobinding": false
+}

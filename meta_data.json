@@ -1,0 +1,14 @@
+{
+    "categories": {
+        "0": "data (things)",
+        "1": "artificial intelligence (AI)"
+    },
+    "demo_page": "https://bubble.io/page?name=index&type=page&id=ai-proxy-sample&tab=tabs-1",
+    "description": "Unlock ChatGPT's Full Potential with Real-Time Streaming! 🚀\n\nThis game-changing plugin offers seamless access to all of ChatGPT's capabilities through a simple, no-code interface.\n\n- Access 15+ models via OpenRouter for specialized responses 🤖\n- Integrate any model from OpenAI and other compatible endpoints 🔌\n- Experience real-time conversations without lags or delays ⚡️  \n- Monitor usage and fine-tune streaming with granular controls 📈\n- Completely customize your AI experience for diverse applications ✨\n\nWhether you're creating assistants, generating content, or exploring AI's boundaries, this plugin empowers endless possibilities:\n\n- Build intricate chatbots with conversational flows 🤝\n- Rapidly answer queries across countless domains 💡\n- Automate diverse processes with custom logic ⚙️\n- Creatively expand your content strategy 📝\n- Optimize interactions by steering model behavior 🎯\n- Generate code, summarize data, moderate content, and more! 🔧\n\nSimply install and configure settings - no coding needed. 👩‍💻 Now you can tap into the full spectrum of AI capabilities in real time. Upgrade your project today! 🆙\n\nSponsored by https://CoAlias.com/",
+    "image": "//meta-l.cdn.bubble.io/f1691835365148x274726274876807100/Bubble%20Plugins%20by%20CoAlias.png",
+    "license": "open_source",
+    "link": "https://nocodesaastoolbox.com/",
+    "name": "AI Proxy - Streaming of 13 models",
+    "plugin_instructions": "1. Go to https://nocodesaastoolbox.com/\n\n2. Login with your emailadres. You will get a email with a link to login.\n\n3. Click on Add app. Add your app url like https://bubble.io/ and press Add.\n\n4. Click on Show Client ID & Secret. Fill in your Client ID and Client Secret into the plugin.\n\nView how it works on: https://ai-proxy-sample.bubbleapps.io/version-test\n\nCheck the editor for a sample: https://bubble.io/page?name=index&type=page&id=ai-proxy-sample&tab=tabs-1\n\nor view the tutorial on: https://www.youtube.com/watch?v=KU59HsPL3OY",
+    "sa_node_version": 18
+}
